@@ -212,8 +212,7 @@ $(document).ready(function () {
 
     array.forEach((element) => {
       cardListHTMLElement.innerHTML += `<li>
-      <div>
-      <div class="first" style="background-image: url('${element.picture}');">
+      <div class="card" style="background-image: url('${element.picture}');">
       <div class="head flex"><h4>${element.cardName}</h4> <div><span>${element.cost.genericCostNumber}</span></div></div>
       </div>
       </li>`;

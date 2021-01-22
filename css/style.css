@@ -57,8 +57,9 @@ a{text-decoration:none;
 }
 /* codice */
 
-.first
+.card
 {
+
   width:250px;
   height:400px;
   background-size: cover;
