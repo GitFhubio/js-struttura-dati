@@ -52,8 +52,8 @@ $(document).ready(function () {
 
       editionType: editions['BL'],
 
-      description: 'Lorem ipsum',
-      story: 'Naltro Lorem Ipsum',
+      description: 'Orso mangia salmoni',
+      story: 'Aspetta che risalgano le correnti e poi se li magna tutti',
 
       score: {
         power: 2, // filtrarlo per power
@@ -146,19 +146,18 @@ $(document).ready(function () {
     {
       cardName: 'Bastianich',
       cost: {
-        genericCostNumber: '',
+        genericCostNumber: 5,
         costFields: [
           // colors array con riferimento a fieldCodes
           fieldCodes[2], // 'B',  - un suo riferimento
         ],
       },
         picture:'https://images.lacucinaitaliana.it/wp-content/uploads/2017/02/joe_bastianich.jpg',
-      cardType: cardTypes[2],
-      cardObject: 'Enchant',
+      cardType: cardTypes[4],
+      cardObject: 'Masterchef',
       editionType: editions['SP'],
-      description: 'When paralyze ecc..',
-      story: '',
-      authorString: 'autore copyright autore',
+      description: 'Giudice lanciapiatti',
+      story: 'Sai cosa sono le scialatelle di pollo?',
       cardColor: fieldCodes[2],
       score: {
         power: 3, // filtrarlo per power
@@ -212,8 +211,13 @@ $(document).ready(function () {
 
     array.forEach((element) => {
       cardListHTMLElement.innerHTML += `<li>
-      <div class="card" style="background-image: url('${element.picture}');">
+      <div class="card flex" style="background-image: url('${element.picture}');">
       <div class="head flex"><h4>${element.cardName}</h4> <div><span>${element.cost.genericCostNumber}</span></div></div>
+      <div class="descrizione">
+      <div class="center flex"><h3>${element.cardType} - ${element.cardObject}</h3><span style="background-color:${element.editionType.rarity};">${element.editionType.edition}</span></div>
+      <div class="bottom"><h5>${element.description}</h5><p>${element.story}</p></div>
+      </div>
+      <span class="powers"> ${element.score.power} / ${element.score.toughness} </span>
       </div>
       </li>`;
     });

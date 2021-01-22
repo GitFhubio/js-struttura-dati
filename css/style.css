@@ -59,17 +59,18 @@ a{text-decoration:none;
 
 .card
 {
-
-  width:250px;
-  height:400px;
+  margin: 10px;
+  border-radius: 10px;
+  padding:10px;
+  width:290px;
+  height:450px;
   background-size: cover;
   background-position: center;
-  border:5px solid white;
-}
-
-h4 , .head span{
+  border:10px solid white;
   color:white;
   text-shadow: 1px 1px black;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .flex{
@@ -81,4 +82,35 @@ h4 , .head span{
 
 .head span{
   padding:5px;
+}
+
+.center{
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  opacity:0.8;
+  color:black;
+  border:2px solid darkgreen;
+  border-radius: 5px;
+}
+.bottom{
+  width:100%;
+  background-color: white;
+  opacity:0.8;
+  color:black;
+    border:2px solid darkgreen;
+    border-radius: 5px;
+}
+h5,p{
+  text-align: center;
+
+}
+.descrizione{
+  margin-top:70px;
+}
+.powers{
+text-align: right;
+}
+.bottom p{
+  font-style: italic;
 }
