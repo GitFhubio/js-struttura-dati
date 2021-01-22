@@ -214,7 +214,7 @@ $(document).ready(function () {
       <div class="card flex" style="background-image: url('${element.picture}');">
       <div class="head flex"><h4>${element.cardName}</h4> <div><span>${element.cost.genericCostNumber}</span></div></div>
       <div class="descrizione">
-      <div class="center flex"><h3>${element.cardType} - ${element.cardObject}</h3><span style="background-color:${element.editionType.rarity};">${element.editionType.edition}</span></div>
+      <div class="center flex"><h3>${element.cardType} - ${element.cardObject}</h3><span class="rarity" style="background-color:${element.editionType.rarity};">${element.editionType.edition}</span></div>
       <div class="bottom"><h5>${element.description}</h5><p>${element.story}</p></div>
       </div>
       <span class="powers"> ${element.score.power} / ${element.score.toughness} </span>

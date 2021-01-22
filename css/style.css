@@ -68,7 +68,7 @@ a{text-decoration:none;
   background-position: center;
   border:10px solid white;
   color:white;
-  text-shadow: 1px 1px black;
+  text-shadow: 1px black;
   flex-direction: column;
   justify-content: space-between;
 }
@@ -113,4 +113,10 @@ text-align: right;
 }
 .bottom p{
   font-style: italic;
+}
+.rarity{
+  color:white;
+  padding:1px;
+  margin-right: 1px;
+  border-radius: 4px;
 }
