@@ -214,7 +214,7 @@ $(document).ready(function () {
       cardListHTMLElement.innerHTML += `<li>
       <div>
       <div class="first" style="background-image: url('${element.picture}');">
-      <div><h4>${element.cardName}</h4> <div><span>${element.cost.genericCostNumber}</span></div></div>
+      <div class="head flex"><h4>${element.cardName}</h4> <div><span>${element.cost.genericCostNumber}</span></div></div>
       </div>
       </li>`;
     });

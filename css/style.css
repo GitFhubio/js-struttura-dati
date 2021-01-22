@@ -64,3 +64,20 @@ a{text-decoration:none;
   background-size: cover;
   background-position: center;
   border:5px solid white;
+}
+
+h4 , .head span{
+  color:white;
+  text-shadow: 1px 1px black;
+}
+
+.flex{
+  display:flex
+}
+.head{
+  justify-content: space-between;
+}
+
+.head span{
+  padding:5px;
+}
