@@ -12,52 +12,64 @@ const editions={
     rarity:'blue'
   },
 
-  'GG':{edition:'gigi',
+  'SP':{edition:'Special',
 rarity:'red'}
 }
 
 
 const cards = [{
-    cardName: 'Grizzly Bears',
-    cost:{
-      genericCost:1,
-        costFields:[
-          fieldCodes[0],
-        fieldCodes[2]
-      ]
-    },
-    picture:'',
-    cardType:cardTypes[1],
-    cardObject:'Bear',
-    editionType: editions['BL'],
-    description:'Distrugge ragnatele con un raggio laser',
-    story:'Ricorda i mostri',
-    author:'Bangilom',
-    score:{
-      power:3,
-      toughness:2
-    }
+
+  cardName: 'Grizzly Bears',
+
+  cost: {
+    genericCostNumber: 1,
+    costFields: [ // colors array con riferimento a fieldCodes
+      fieldCodes[0],  // 'W',  - un suo riferimento
+      fieldCodes[2]   // 'B'
+    ],
+  },
+
+  picture: 'images/i.png',
+  cardType: cardTypes[1],
+  cardObject: 'Bear',
+
+  editionType: editions['BL'],
+
+  description: 'Lorem ipsum',
+  story: 'Naltro Lorem Ipsum',
+
+  score: {
+    power: 2,  // filtrarlo per power
+    toughness: 2
+  }
+
   },
   {
-      cardName: 'Anaba Shaman',
-      cost:{
-        genericCost:2,
-          costFields:[
-            fieldCodes[3],
-          fieldCodes[3]
-        ]
-      },
-      picture:'',
-      cardType:cardTypes[1],
-      cardObject:'Minotaur',
-      editionType: editions['BL'],
-      description:'Sparge sangue nelle città del medio Oriente',
-      story:'Una morte è troppa e due sono poche',
-      author:'Bossilena',
-      score:{
-        power:4,
-        toughness:5
-      }
+
+    cardName: 'Sviluppatore guerriero',
+
+    cost: {
+      genericCostNumber: 3,
+      costFields: [ // colors array con riferimento a fieldCodes
+        fieldCodes[2],
+        fieldCodes[3]
+      ],
+    },
+
+    picture: 'images/g.png',  // da inserire immagine
+    cardType: cardTypes[1],
+    cardObject: 'Bear',
+
+    editionType: editions['BL'],
+
+    description: 'Lo sviluppatore guerriero spezza i byte in bit!',
+    story: 'Lo sviluppatore guerriero è una forma di essere umano evoluto.',
+
+    score: {
+      power: 5,  // r
+      toughness: 3
+    }
+
     },
     {
         cardName: 'Bastianich',
