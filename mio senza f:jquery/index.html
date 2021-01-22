@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Magic cards</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+    crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Rubik&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+    <div id="page-wrapper">
+      <div class="container">
+        <div class="row title">
+          <h1>Magic Cards</h1>
+        </div>
+        <div class="row">
+          <div id="filter">
+            <label for="select1">FILTRA PER POWER</label>
+            <select class="cards-filter1" id='select1' name='select1'>
+              <option value="">All</option>
+            </select>
+            <label for="selezione">FILTRA PER CARDTYPE</label>
+            <select class="cards-filter2" id='select2' name='select2'>
+              <option value="">All</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div id="cards-container"></div>
+        </div>
+        <div >
+        <h2>Lista nomi carte: MILESTONE1</h2>
+        <ul id="lista">
+        </ul>
+      </div>
+    </div>
+   <script src="js/script.js" charset="utf-8"></script>
+  </body>
+</html>

@@ -13,33 +13,28 @@
     <link href="https://fonts.googleapis.com/css2?family=Acme&family=Rubik&display=swap" rel="stylesheet">
   </head>
   <body>
+    <div>
+    <label for="powerSelect">Filtra per potere</label>
+    <select id="powerSelect" name="powerSelect">
+    <option>Scegli potere carta</option>
+    </select>
+        </div>
+        <div>
+        <label for="cardTypeSelect">Filtra per potere</label>
+        <select id="cardTypeSelect" name="powerSelect">
+        <option> Scegli tipo carta</option>
+        </select>
+            </div>
 
-    <div id="page-wrapper">
-      <div class="container">
-        <div class="row title">
-          <h1>Magic Cards</h1>
-        </div>
-        <div class="row">
-          <div id="filter">
-            <label for="select1">FILTRA PER POWER</label>
-            <select class="cards-filter1" id='select1' name='select1'>
-              <option value="">All</option>
-            </select>
-            <label for="selezione">FILTRA PER CARDTYPE</label>
-            <select class="cards-filter2" id='select2' name='select2'>
-              <option value="">All</option>
-            </select>
-          </div>
-        </div>
-        <div class="row">
-          <div id="cards-container"></div>
-        </div>
-        <div >
-        <h2>Lista nomi carte: MILESTONE1</h2>
-        <ul id="lista">
-        </ul>
-      </div>
-    </div>
-   <script src="js/script.js" charset="utf-8"></script>
+            <div class="">
+              <button type="resetButton" name="button">Resetta lista</button>
+            </div>
+ <ul id="listaCarte">
+
+
+ </ul>
+
+    <script src="js/script.js" charset="utf-8"></script>
+
   </body>
 </html>
