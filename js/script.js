@@ -45,7 +45,8 @@ $(document).ready(function () {
         ],
       },
 
-      picture: 'images/i.png',
+
+      picture: 'https://www.conservationnw.org/wp-content/uploads/2020/03/JSW_6993-scaled.jpg',
       cardType: cardTypes[1],
       cardObject: 'Bear',
 
@@ -71,8 +72,7 @@ $(document).ready(function () {
           fieldCodes[3],
         ],
       },
-
-      picture: 'images/g.png', // da inserire immagine
+      picture: 'https://quifinanza.it/wp-content/uploads/sites/5/2019/10/sviluppatore-web-1-1.jpg',
       cardType: cardTypes[1],
       cardObject: 'Bear',
 
@@ -100,7 +100,7 @@ $(document).ready(function () {
         ],
       },
 
-      picture: 'images/mewtwo.png', // da inserire immagine
+    picture: 'https://i.pinimg.com/originals/2c/dd/dd/2cdddd1f81c64cac5f4ff31e61fc1471.png',  // da inserire immagine
       cardType: cardTypes[1],
       cardObject: 'Pokemon',
 
@@ -116,7 +116,7 @@ $(document).ready(function () {
     },
     // carta 4
     {
-      cardName: 'Kelenvorita mascherato',
+      cardName: 'Fulmine',
 
       cost: {
         genericCostNumber: 2,
@@ -127,15 +127,15 @@ $(document).ready(function () {
         ],
       },
 
-      picture: 'images/kelenvorita.png', // da inserire immagine
-      cardType: cardTypes[1],
-      cardObject: "Mezz'orco",
+      picture:'https://wfprwpnressa01.blob.core.windows.net/sicurauto/2019/10/10/14/00/Fulmine.jpg',
+      cardType: cardTypes[5],
+      cardObject: "Meteo",
 
       editionType: editions['SP'],
 
-      description:
-        'Quando arriva a 0 punti ferita acquista un punto ferita e invece di finire al cimitero recupera forza',
-      story: 'Kelenvor predica la grigia ed imparziale giustizia della morte',
+      description:'Potere divino'
+               ,
+      story: 'Se indossi metallo sei spacciato',
 
       score: {
         power: 4,
@@ -144,7 +144,7 @@ $(document).ready(function () {
     },
     // carta 5
     {
-      cardName: 'Paralyze',
+      cardName: 'Bastianich',
       cost: {
         genericCostNumber: '',
         costFields: [
@@ -152,7 +152,7 @@ $(document).ready(function () {
           fieldCodes[2], // 'B',  - un suo riferimento
         ],
       },
-      picture: 'images/i.png',
+        picture:'https://images.lacucinaitaliana.it/wp-content/uploads/2017/02/joe_bastianich.jpg',
       cardType: cardTypes[2],
       cardObject: 'Enchant',
       editionType: editions['SP'],
@@ -167,21 +167,21 @@ $(document).ready(function () {
     },
     // carta 6
     {
-      cardName: 'Dancing Scimitar',
+      cardName: 'Link',
 
       cost: {
         genericCostNumber: 4,
         costFields: [],
       },
 
-      picture: 'images/g.png', // da inserire immagine
+      picture:'https://images.everyeye.it/img-articoli/the-legend-of-zelda-breath-of-the-wild-dungeon-abilita-crescita-dell-eroe-speciale-v4-32625-1280x16.jpg',
       cardType: cardTypes[3],
       cardObject: 'Spirit',
 
       editionType: editions['BL'],
 
       description:
-        'Vola (questa creautare non può essere fermata eccetto da una creatura volante )',
+        'Questo guerriero non può essere fermato',
       story:
         "Una spada che non ha mai conosciuto il fodero, un'impugnatura che non ha mai conosciuto mano",
 
@@ -191,6 +191,7 @@ $(document).ready(function () {
       },
     },
   ];
+
 
   //METODI (LOGICA)
   function filterByPower(powerValue, array) {
@@ -210,10 +211,10 @@ $(document).ready(function () {
     cardListHTMLElement.innerHTML = '';
 
     array.forEach((element) => {
-      cardListHTMLElement.innerHTML += `<li> 
+      cardListHTMLElement.innerHTML += `<li>
       <div>
-     <h2>Nome carta: ${element.cardName} </h2>
-     <h4>Tipo carta: ${element.cardType} </h4>
+      <div class="first" style="background-image: url('${element.picture}');">
+      <div><h4>${element.cardName}</h4> <div><span>${element.cost.genericCostNumber}</span></div></div>
       </div>
       </li>`;
     });
