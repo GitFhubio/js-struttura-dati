@@ -80,7 +80,7 @@ const cards = [{
             fieldCodes[2]
           ]
         },
-        picture:'',
+        picture:'https://images.lacucinaitaliana.it/wp-content/uploads/2017/02/joe_bastianich.jpg',
         cardType:cardTypes[1],
         cardObject:'Judge',
         editionType: editions['GG'],
@@ -93,7 +93,7 @@ const cards = [{
         }
       },
       {
-          cardName: 'MedioOriente',
+          cardName: 'Oriente',
           cost:{
             genericCost:2,
               costFields:[
@@ -101,7 +101,7 @@ const cards = [{
               fieldCodes[3]
             ]
           },
-          picture:'',
+          picture:'https://www.open.online/wp-content/uploads/2020/04/MEDIO-ORIENTE-TAG.jpg',
           cardType:cardTypes[0],
           cardObject:'land',
           editionType: editions['BL'],
@@ -121,7 +121,7 @@ const cards = [{
                 fieldCodes[3]
               ]
             },
-            picture:'',
+            picture:'https://images.everyeye.it/img-articoli/the-legend-of-zelda-breath-of-the-wild-dungeon-abilita-crescita-dell-eroe-speciale-v4-32625-1280x16.jpg',
             cardType:cardTypes[2],
             cardObject:'strange',
             editionType: editions['GG'],
@@ -142,7 +142,7 @@ const cards = [{
                   fieldCodes[2]
                 ]
               },
-              picture:'',
+              picture:'https://cultura.biografieonline.it/wp-content/uploads/2019/12/mito-di-pandora-vaso-di-pandora.jpg',
               cardType:cardTypes[3],
               cardObject:'Vaso',
               editionType: editions['BL'],
@@ -163,7 +163,7 @@ const cards = [{
                     fieldCodes[4]
                   ]
                 },
-                picture:'',
+                picture:'https://wfprwpnressa01.blob.core.windows.net/sicurauto/2019/10/10/14/00/Fulmine.jpg',
                 cardType:cardTypes[4],
                 cardObject:'Out of nowhere',
                 editionType: editions['BL'],
@@ -184,7 +184,7 @@ const cards = [{
                       fieldCodes[2]
                     ]
                   },
-                  picture:'',
+                  picture:'https://media.newyorker.com/photos/5f5908c225409f35fe11402e/1:1/w_1706,h_1706,c_limit/Clegg-OnLava.jpg',
                   cardType:cardTypes[5],
                   cardObject:'Ascia',
                   editionType: editions['BL'],
@@ -205,7 +205,7 @@ const cards = [{
                         fieldCodes[2]
                       ]
                     },
-                    picture:'',
+                    picture:'https://www.guidaolistica.com/media/k2/items/cache/57df6a0f34180006582f429068c6ac21_L.jpg',
                     cardType:cardTypes[5],
                     cardObject:'Invocazione',
                     editionType: editions['BL'],
@@ -261,7 +261,7 @@ console.log(cards);
 cards.forEach((item) => {
 const {cardName,cost,picture,cardType,cardObject,editionType,description,story,score} = item;
 cardsContainer.innerHTML+=`
-<div>${cardName}</div>
+<div style="background-image: url('${picture}');">${cardName}</div>
 `
 });
 
@@ -273,7 +273,7 @@ selected_cards.forEach((item) => {
 const {cardName,cost,picture,cardType,cardObject,editionType,description,story,score} = item;
 
 cardsContainer.innerHTML+=`
-<div>${cardName}</div>
+<div style="background-image: url('${picture}');">${cardName}</div>
 
 `
 })
@@ -295,7 +295,7 @@ if (selected_type=='') {
   cards.forEach((item) => {
   const {cardName,cost,picture,cardType,cardObject,editionType,description,story,score} = item;
   cardsContainer.innerHTML+=`
-  <div>${cardName}</div>
+<div style="background-image: url('${picture}');">${cardName}</div>
   `
   });
 console.log(cards);
@@ -307,7 +307,7 @@ console.log(selected_cards);
 selected_cards.forEach((item) => {
 const {cardName,cost,picture,cardType,cardObject,editionType,description,story,score} = item;
 cardsContainer.innerHTML+=`
-<div>${cardName} </div>
+<div style="background-image: url('${picture}');">${cardName}</div>
 `
 });
 

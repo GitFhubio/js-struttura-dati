@@ -7,6 +7,7 @@ box-sizing: border-box;
 /* regole generali */
 body{ font-family: Arial sans-serif;
   font-size:16px;
+  background-color:darkred;
 }
 
 .big-text{font-size:70px;}
@@ -55,3 +56,15 @@ a{text-decoration:none;
   text-align: center;
 }
 /* codice */
+#cards-container{
+  display:flex;
+  justify-content: space-around;
+
+}
+#cards-container div
+{
+  width:250px;
+  height:400px;
+  background-size: cover;
+  background-position: center;
+  border:5px solid white;
