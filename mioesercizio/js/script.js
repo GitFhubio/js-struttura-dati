@@ -29,7 +29,7 @@ const cards = [{
     ],
   },
 
-  picture: 'images/i.png',
+  picture: 'https://www.conservationnw.org/wp-content/uploads/2020/03/JSW_6993-scaled.jpg',
   cardType: cardTypes[1],
   cardObject: 'Bear',
 
@@ -56,7 +56,7 @@ const cards = [{
       ],
     },
 
-    picture: 'images/g.png',  // da inserire immagine
+    picture: 'https://quifinanza.it/wp-content/uploads/sites/5/2019/10/sviluppatore-web-1-1.jpg',  // da inserire immagine
     cardType: cardTypes[1],
     cardObject: 'Bear',
 
@@ -252,39 +252,65 @@ power_list.forEach((element) => {
 
   myselect1.addEventListener('change',() => {
   let selected_power = myselect1.value;
+  cardsContainer.innerHTML='';
   console.log(selected_power);
 if (selected_power=='') {
 
 console.log(cards);
 
+cards.forEach((item) => {
+const {cardName,cost,picture,cardType,cardObject,editionType,description,story,score} = item;
+cardsContainer.innerHTML+=`
+<div>${cardName}</div>
+`
+});
+
 }
 else{
 const selected_cards = cards.filter((item) => selected_power == item.score.power );
 console.log(selected_cards);
+selected_cards.forEach((item) => {
+const {cardName,cost,picture,cardType,cardObject,editionType,description,story,score} = item;
+
+cardsContainer.innerHTML+=`
+<div>${cardName}</div>
+
+`
+})
 }
-}
-);
+});
 
 // MILESTONE3
-
 
 cardTypes.forEach((element) => {
    myselect2.innerHTML += `
      <option value="${element}">${element}</option>
    `
  });
-
-
  myselect2.addEventListener('change',() => {
  let selected_type = myselect2.value;
+   cardsContainer.innerHTML='';
 if (selected_type=='') {
 
+  cards.forEach((item) => {
+  const {cardName,cost,picture,cardType,cardObject,editionType,description,story,score} = item;
+  cardsContainer.innerHTML+=`
+  <div>${cardName}</div>
+  `
+  });
 console.log(cards);
-
 }
 else{
+
 const selected_cards = cards.filter((item) => selected_type == item.cardType );
 console.log(selected_cards);
+selected_cards.forEach((item) => {
+const {cardName,cost,picture,cardType,cardObject,editionType,description,story,score} = item;
+cardsContainer.innerHTML+=`
+<div>${cardName} </div>
+`
+});
+
 }
 }
 );
