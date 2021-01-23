@@ -74,7 +74,7 @@ $(document).ready(function () {
       },
       picture: 'https://quifinanza.it/wp-content/uploads/sites/5/2019/10/sviluppatore-web-1-1.jpg',
       cardType: cardTypes[1],
-      cardObject: 'Bear',
+      cardObject: 'Human',
 
       editionType: editions['BL'],
 
@@ -162,15 +162,75 @@ $(document).ready(function () {
       score: {
         power: 3, // filtrarlo per power
         toughness: 0,
-      },
+      }
     },
+      {
+          cardName: 'Oriente',
+          cost:{
+            genericCostNumber:2,
+              costFields:[
+                fieldCodes[3],
+              fieldCodes[3]
+            ]
+          },
+          picture:'https://www.open.online/wp-content/uploads/2020/04/MEDIO-ORIENTE-TAG.jpg',
+          cardType:cardTypes[0],
+          cardObject:'land',
+          editionType: editions['BL'],
+          description:'La terra del sushi',
+          story:'L\'urlo di Chang terrorizza l\'occidente',
+          score:{ power:1,
+              toughness:2
+            }
+        },
+        {
+            cardName: 'Stasys',
+            cost:{
+              genericCostNumber:1,
+                costFields:[
+                  fieldCodes[1],
+                fieldCodes[3]
+              ]
+            },
+            picture:'https://i.ytimg.com/vi/m1dv5SdiB8I/maxresdefault.jpg',
+            cardType:cardTypes[2],
+            cardObject:'strumento',
+            editionType: editions['SP'],
+            description:'Blocca i nemici',
+            story:'Zelda Breath of the Wild',
+            score:{
+              power:1,
+              toughness:2
+            }
+          },
+          {
+              cardName: 'Vaso di Pandora',
+              cost:{
+                genericCostNumber:1,
+                  costFields:[
+                    fieldCodes[0],
+                  fieldCodes[2]
+                ]
+              },
+              picture:'https://cultura.biografieonline.it/wp-content/uploads/2019/12/mito-di-pandora-vaso-di-pandora.jpg',
+              cardType:cardTypes[3],
+              cardObject:'Vaso',
+              editionType: editions['BL'],
+              description:'Non aprirlo',
+              story:'Se lo apri muori',
+              author:'Artigiano sconosciuto',
+              score:{
+                power:2,
+                toughness:2
+              }
+            },
     // carta 6
     {
       cardName: 'Link',
 
       cost: {
         genericCostNumber: 4,
-        costFields: [],
+        costFields: [0],
       },
 
       picture:'https://images.everyeye.it/img-articoli/the-legend-of-zelda-breath-of-the-wild-dungeon-abilita-crescita-dell-eroe-speciale-v4-32625-1280x16.jpg',
@@ -187,11 +247,51 @@ $(document).ready(function () {
       score: {
         power: 1,
         toughness: 5,
-      },
+      }
     },
+    {
+        cardName: 'Ascia di lava',
+        cost:{
+          genericCostNumber:1,
+            costFields:[
+              fieldCodes[0],
+            fieldCodes[2]
+          ]
+        },
+        picture:'https://media.newyorker.com/photos/5f5908c225409f35fe11402e/1:1/w_1706,h_1706,c_limit/Clegg-OnLava.jpg',
+        cardType:cardTypes[5],
+        cardObject:'Ascia',
+        editionType: editions['BL'],
+        description:'Divide tutto a metà',
+        story:'Ha diviso originariamente buoni e cattivi',
+        score:{
+          power:3,
+          toughness:2
+        }
+      },
+      {
+          cardName: 'Invocazione a raccolta',
+          cost:{
+            genericCostNumber:1,
+              costFields:[
+                fieldCodes[0],
+              fieldCodes[2]
+            ]
+          },
+          picture:'https://www.guidaolistica.com/media/k2/items/cache/57df6a0f34180006582f429068c6ac21_L.jpg',
+          cardType:cardTypes[5],
+          cardObject:'Invocazione',
+          editionType: editions['BL'],
+          description:'Strimgiamci a coorte',
+          story:'Siam pronti alla morte',
+          score:{
+            power:1,
+            toughness:3
+          }
+        }
   ];
 
-
+console.log(cards);
   //METODI (LOGICA)
   function filterByPower(powerValue, array) {
     return array.filter((element) => {
