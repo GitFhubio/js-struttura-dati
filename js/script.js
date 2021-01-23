@@ -226,21 +226,21 @@ $(document).ready(function () {
             },
     // carta 6
     {
-      cardName: 'Link',
+      cardName: 'Spada leggendaria',
 
       cost: {
         genericCostNumber: 4,
         costFields: [0],
       },
 
-      picture:'https://images.everyeye.it/img-articoli/the-legend-of-zelda-breath-of-the-wild-dungeon-abilita-crescita-dell-eroe-speciale-v4-32625-1280x16.jpg',
+      picture:'https://i.ytimg.com/vi/8NiCRYZVscc/maxresdefault.jpg',
       cardType: cardTypes[3],
-      cardObject: 'Spirit',
+      cardObject: 'Sword',
 
       editionType: editions['BL'],
 
       description:
-        'Questo guerriero non può essere fermato',
+        'Con questa infliggi il 150% in più di danno ai tuoi nemici.Sempre che riesci ad estrarla',
       story:
         "Una spada che non ha mai conosciuto il fodero, un'impugnatura che non ha mai conosciuto mano",
 
