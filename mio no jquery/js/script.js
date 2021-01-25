@@ -260,7 +260,7 @@ array.forEach((item) => {
 const {cardName,cost,picture,cardType,cardObject,editionType,description,story,score} = item;
 cardsContainer.innerHTML+=`
 <div style="background-image: url('${picture}');">
-<h4>${cardName}</h4> 
+<h4>${cardName}</h4>
 
 
 </div>
@@ -291,7 +291,7 @@ Render(selected_power,selected_cards);
 // MILESTONE3
 
  myselect2.addEventListener('change',function() {
- let selected_type = myselect2.value;
+ let selected_type = this.value;
 if (selected_type=='') {
 Render(selected_type,cards);
 }
@@ -303,3 +303,7 @@ Render(selected_type,selected_cards2);
 }
 }
 );
+
+// triggerare select in javascript puro
+var event = new Event('change');
+myselect1.dispatchEvent(event);
