@@ -1,42 +1,42 @@
 const students=[
   {
-   nome:"Fabio",
-   cognome:"Petrone",
-   eta:30,
-   promosso:true,
-   classe:1
+    nome:"Fabio",
+    cognome:"Petrone",
+    eta:30,
+    promosso:true,
+    classe:1
   },
   {
-   nome:"Enrico",
-   cognome:"Ruggeri",
-   eta:30,
-   promosso:true,
-   classe:1
+    nome:"Enrico",
+    cognome:"Ruggeri",
+    eta:30,
+    promosso:true,
+    classe:1
   },
   {
-   nome:"Rosa",
-   cognome:"Carpentieri",
-   eta:30,
-   promosso:false,
-   classe:3
+    nome:"Rosa",
+    cognome:"Carpentieri",
+    eta:30,
+    promosso:false,
+    classe:3
   },
   {
-   nome:"Alessio",
-   cognome:"Scarabei",
-   eta:34,
-   promosso:false,
-   classe:4
+    nome:"Alessio",
+    cognome:"Scarabei",
+    eta:34,
+    promosso:false,
+    classe:4
   },  {
-     nome:"Michele",
-     cognome:"Bonfiglio",
-     eta:29,
-     promosso:true,
-     classe:5
-    },
+    nome:"Michele",
+    cognome:"Bonfiglio",
+    eta:29,
+    promosso:true,
+    classe:5
+  },
 ]
 // cicla array di oggetti e ogni volta ha un oggetto in canna
-  const filteredArray= students.filter((element) => {
-    return element.promosso == false;
+const filteredArray= students.filter((element) => {
+  return element.promosso == false;
 })
 
 console.log(filteredArray);
@@ -74,7 +74,7 @@ console.log(finalArray);
 
 let mappedArray2=students.map((element)=>{
   let {nome,cognome,eta,promosso,classe} = element;
- if (promosso==true)
+  if (promosso==true)
   {
     classe+=1;
   }
@@ -96,8 +96,8 @@ console.log(finalArray2);
 
 
 
-  const promossi= students.filter((element) => {
-    return element.promosso == true;
+const promossi= students.filter((element) => {
+  return element.promosso == true;
 })
 
 console.log(promossi);
@@ -123,21 +123,22 @@ var RandomNumbers=[];
 var i = 0;
 var Random;
 while (RandomNumbers.length<students.length) {
-Random=Math.floor(Math.random()*students.length);
-if(!RandomNumbers.includes(Random)){
-RandomNumbers.push(Random);}
-i++;
-}
-console.log(RandomNumbers);
-// ciclavi in questi numeri randomici e poi facevi la verifica per
-// studente promosso
-var capitano3;
-for (var i = 0; i < RandomNumbers.length; i++) {
- if(RandomNumbers[i] <promossi.length)
- { capitano3=promossi[RandomNumbers[i]];
- break;} else{
-   continue;
- }
-}
+  Random=Math.floor(Math.random()*students.length);
+  if(!RandomNumbers.includes(Random)){
+    RandomNumbers.push(Random);}
+    i++;
+  }
+  console.log(RandomNumbers);
+  // ciclavi in questi numeri randomici e poi facevi la verifica per
+  // studente promosso
+  var capitano3;
+  for (var i = 0; i < RandomNumbers.length; i++) {
+    if(RandomNumbers[i] <promossi.length)
+    { capitano3=promossi[RandomNumbers[i]];
+      break;
+    } else {
+      continue;
+    }
+  }
 
-console.log(capitano3);
+  console.log(capitano3);
