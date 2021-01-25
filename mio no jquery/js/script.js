@@ -244,77 +244,61 @@ if (!power_list.includes(score.power))
 
 })
  power_list=power_list.sort(function(a,b){return a - b});
-power_list.forEach((element) => {
-    myselect1.innerHTML += `
+
+ function RenderSelect(array,DomElement){
+array.forEach((element) => {
+  const myselect=document.getElementById(DomElement)
+      myselect.innerHTML += `
       <option value="${element}">${element}</option>
     `
   });
+}
+function Render(option,array){
+cardsContainer.innerHTML='';
 
-  myselect1.addEventListener('change',() => {
-  let selected_power = myselect1.value;
-  cardsContainer.innerHTML='';
-  console.log(selected_power);
-if (selected_power=='') {
-
-console.log(cards);
-
-cards.forEach((item) => {
+array.forEach((item) => {
 const {cardName,cost,picture,cardType,cardObject,editionType,description,story,score} = item;
 cardsContainer.innerHTML+=`
 <div style="background-image: url('${picture}');">
-<div><h4>${cardName}</h4> <div><span>${cost}</span></div></div>
+<h4>${cardName}</h4> 
 
 
 </div>
 
 `
 });
+}
 
+
+
+
+RenderSelect(power_list,'select1');
+RenderSelect(cardTypes,'select2');
+
+  myselect1.addEventListener('change',() => {
+let selected_power = myselect1.value;
+if (selected_power=='') {
+Render(selected_power,cards);
 }
 else{
+
+cardsContainer.innerHTML='';
 const selected_cards = cards.filter((item) => selected_power == item.score.power );
-console.log(selected_cards);
-selected_cards.forEach((item) => {
-const {cardName,cost,picture,cardType,cardObject,editionType,description,story,score} = item;
-
-cardsContainer.innerHTML+=`
-<div style="background-image: url('${picture}');">${cardName}</div>
-
-`
-})
+Render(selected_power,selected_cards);
 }
 });
 
 // MILESTONE3
 
-cardTypes.forEach((element) => {
-   myselect2.innerHTML += `
-     <option value="${element}">${element}</option>
-   `
- });
- myselect2.addEventListener('change',() => {
+ myselect2.addEventListener('change',function() {
  let selected_type = myselect2.value;
-   cardsContainer.innerHTML='';
 if (selected_type=='') {
-
-  cards.forEach((item) => {
-  const {cardName,cost,picture,cardType,cardObject,editionType,description,story,score} = item;
-  cardsContainer.innerHTML+=`
-<div style="background-image: url('${picture}');">${cardName}</div>
-  `
-  });
-console.log(cards);
+Render(selected_type,cards);
 }
 else{
 
-const selected_cards = cards.filter((item) => selected_type == item.cardType );
-console.log(selected_cards);
-selected_cards.forEach((item) => {
-const {cardName,cost,picture,cardType,cardObject,editionType,description,story,score} = item;
-cardsContainer.innerHTML+=`
-<div style="background-image: url('${picture}');">${cardName}</div>
-`
-});
+const selected_cards2 = cards.filter((item) => selected_type == item.cardType );
+Render(selected_type,selected_cards2);
 
 }
 }
