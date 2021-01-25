@@ -118,11 +118,12 @@ console.log(capitano);
 
 // avremmo dovuto generare piu numeri randomici
 
+console.log(students);
 var RandomNumbers=[];
 var i = 0;
 var Random;
-while (RandomNumbers.length<3) {
-Random=Math.floor(Math.random()*promossi.length);
+while (RandomNumbers.length<students.length) {
+Random=Math.floor(Math.random()*students.length);
 if(!RandomNumbers.includes(Random)){
 RandomNumbers.push(Random);}
 i++;
@@ -132,11 +133,11 @@ console.log(RandomNumbers);
 // studente promosso
 var capitano3;
 for (var i = 0; i < RandomNumbers.length; i++) {
-for (var j=0;j<promossi.length;j++){
-  if(RandomNumbers[i]==j)
-  {
-    capitano3=promossi[j];
-  }}
-break;}
+ if(RandomNumbers[i] <promossi.length)
+ { capitano3=promossi[RandomNumbers[i]];
+ break;} else{
+   continue;
+ }
+}
 
 console.log(capitano3);
